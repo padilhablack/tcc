@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tcc</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+
+<link href="jqueryMobile/jquery.mobile-git.css" rel="stylesheet">
+<link href="jqueryMobile/themes/unaspmobile.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+<script src="jqueryMobile/jquery.mobile-git.js"></script>
+</head>
+<body style="display: none;">
+
+	<!-- Login -->
+	<div data-role="page" id="login" class="paginas  ui-responsive-panel">
+			<!-- panel -->
+			<div data-role="panel" id="mypanel" data-display="overlay"
+				data-position="right" style="max-width: 200px; max-height: 10px;">
+				<a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Fechar</a>
+				<a href="#" class="sair" class="ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Sair</a>
+			</div>
+			<!-- /panel -->
+		<div data-role="header">
+			<div class="faixa_yellow"></div>
+			<ul data-role="listview" data-inset="true" class="header-unasp"
+				data-divider-theme="b">
+				<li data-icon="custom"><a href="#"
+					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
+						src="images/logo.png" class="logo">
+						<h1>UNASPMOBILE</h1>
+						<p>Unasp-EC v.1.0</p> </a> <a href="#mypanel"
+					data-rel="panel" data-transition="pop"
+					class="ui-btn ui-btn-inline ui-corner-all" class="ui-icon-bars"
+					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
+			</ul>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<form method="" action="" class="login">
+				<label for="usuario">Usuário:</label> <input type="text"
+					name="usuario" id="usuario"> <label for="senha">Senha:</label>
+				<input type="password" name="senha" id="senha"> <a href="#"
+					data-role="button" id="envia">Entrar</a>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed" style="bottom: 0;">
+			<h5>footer</h5>
+		</div>
+	</div>
+
+	<!-- /Login -->
+
+	<!-- Menu-->
+	<div data-role="page" id="menu">
+			<!-- panel -->
+			<div data-role="panel" id="panel-menu" data-display="overlay"
+				data-position="right" style="max-width: 200px; max-height: 10px;">
+				<a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Fechar</a>
+				<a href="#" class="sair" class="ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Sair</a>
+			</div>
+			<!-- /panel -->
+		<div class="faixa_yellow"></div>
+		<div data-role="header">
+			<ul data-role="listview" data-inset="true" class="header-unasp"
+				data-divider-theme="b">
+				<li data-icon="custom"><a href="#"
+					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
+						src="images/logo.png" class="logo">
+						<h1 style="text-align: center">MENU</h1> </a><a href="#panel-menu"
+					data-rel="panel" data-transition="pop"
+					class="ui-btn ui-btn-inline ui-corner-all" class="ui-icon-bars"
+					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
+			</ul>
+		</div>
+		<div class="user-header">
+			<div class="ui-grid-c">
+				<div class="ui-block-a"
+					style="margin-left: 3%; margin-right: 0px; margin-bottom: 1%; margin-top: 2%">
+					<label id="display-name-user" class="display-name-user">Usuário</label>
+				</div>
+			</div>
+		</div>
+		<div data-role="content" style="padding-left: 5%; padding-right: 5%">
+			<div class="ui-grid-c content-menu-opcoes">
+				<div class="ui-block-a">
+					<a href="#" class="btn-unasp btn-home" data-role="button"
+						id="unaspec" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+					<p class="title">UNASP-EC</p>
+				</div>
+				<div class="ui-block-b ">
+					<a href="#biblioteca" class="btn-unasp btn-book" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+					<p class="title">Biblioteca</p>
+				</div>
+				<div class="ui-block-c">
+					<a href="#notas" class="btn-unasp btn-notas" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+					<p class="title">Notas e Faltas</p>
+				</div>
+				<div class="ui-block-d" style="">
+					<a href="#" class="btn-unasp btn-info" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+					<p class="title">Informações</p>
+				</div>
+				<div class="ui-block-a">
+					<a href="#finaceiro" class="btn-unasp btn-dolar" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+
+					<p class="title">Financeiro</p>
+				</div>
+				<div class="ui-block-b">
+
+					<a href="#" class="btn-unasp btn-virtual" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+
+					<p class="title">Unasp Virtual</p>
+				</div>
+				<div class="ui-block-c bloco_bottom">
+
+					<a href="#" class="btn-unasp btn-share" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+
+					<p class="title">Divulgue o APP</p>
+				</div>
+				<div class="ui-block-d">
+					<a href="#" class="btn-unasp btn-star" data-role="button"
+						id="button" data-corners="false" data-shadow="false"
+						data-iconshadow="false"
+						style="background-color: transparent; border-color: transparent"></a>
+					<p class="title">Avalie o APP</p>
+				</div>
+			</div>
+			<div class="div_noticias ">
+				<ul class="header-noticia">
+					<li><img alt="" class="img-noticia" src="images/world.png"></li>
+					<li><span class="title-world">Noticias UNASP</span></li>
+				</ul>
+				<br>
+				<div class="noticias ui-content">Feed de noticias</div>
+				<div style="bottom: 0px">
+					<table style="width: 100%;">
+						<tr>
+							<td><a href="#" data-role="button" id="button"
+								data-corners="false" data-shadow="false" data-iconshadow="false"
+								data-icon="carat-l" data-iconpos="notext"
+								style="float: left; background-color: #ed6800; border-color: #ed6800; border-radius: 5px"></a></td>
+							<td><a href="#" data-role="button" id="button"
+								data-corners="false" data-shadow="false" data-iconshadow="false"
+								data-icon="carat-r" data-iconpos="notext"
+								style="float: right; background-color: #ed6800; border-color: #ed6800; border-radius: 5px"></a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed"
+			style="bottom: 0; background-color: #313434">
+			<h5>footer</h5>
+		</div>
+	</div>
+	<!-- /Menu -->
+	<!-- página notas e faltas -->
+	<div data-role="page" id="notas">
+		<div class="faixa_yellow"></div>
+		<div data-role="header">
+			<ul data-role="listview" data-inset="true" class="header-unasp"
+				data-divider-theme="b">
+				<li data-icon="custom"><a href="#"
+					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
+						src="images/logo.png" class="logo">
+						<h1 style="text-align: center">NOTAS e FALTAS</h1> </a><a href="#"
+					class="ui-icon-bars"
+					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<br> <br>
+			<div class="ui-grid-a">
+				<div class="ui-block-a" id='id'>
+					<select id="curso" class="opcoes-notas">
+						<option selected value=''>Curso:</option>
+					</select>
+				</div>
+				<div id="turma" class="ui-block-b">
+					<select class="opcoes-notas">
+						<option value=''>Turma:</option>
+					</select>
+				</div>
+				<div id="periodo" class="ui-block-a">
+					<select class="opcoes-notas">
+						<option selected>Periodo:</option>
+					</select>
+				</div>
+				<div id="disciplina" class="ui-block-b">
+					<select class="opcoes-notas">
+						<option selected>Disciplina:</option>
+					</select>
+				</div>
+			</div>
+			<div data-role="navbar" id="navbar0">
+				<ul>
+					<li><a class="opcoes-aluno" href="#" id="avaliacao-menu">Avaliação</a></li>
+					<li><a href="#" id="notas-menu">Notas</a></li>
+					<li><a href="#" id="faltas-menu">Faltas</a></li>
+				</ul>
+			</div>
+			<div id="conteudo" style="color: black"></div>
+		</div>
+	</div>
+	<div data-role="page" id="finaceiro">
+		<div class="faixa_yellow"></div>
+		<div data-role="header">
+			<ul data-role="listview" data-inset="true" class="header-unasp"
+				data-divider-theme="b">
+				<li data-icon="custom"><a href="#"
+					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
+						src="images/logo.png" class="logo">
+						<h1 style="text-align: center">FINANCEIRO</h1> </a><a href="#"
+					class="ui-icon-bars"
+					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<br> <br> <select name="select" id="option-ano">
+				<option value="option">Ano</option>
+
+			</select>
+
+			<div id='conteudo-financeiro' style="color: #302e2e;"></div>
+		</div>
+	</div>
+	<!-- Biblioteca -->
+	<div data-role="page" id="biblioteca">
+		<div class="faixa_yellow"></div>
+		<div data-role="header">
+			<ul data-role="listview" data-inset="true" class="header-unasp"
+				data-divider-theme="b">
+				<li data-icon="custom"><a href="#"
+					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
+						src="images/logo.png" class="logo">
+						<h1 style="text-align: center">BIBLIOTECA</h1> </a><a href="#"
+					class="ui-icon-bars"
+					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
+			</ul>
+		</div>
+		<div data-role="main" class="content">
+			<br>
+			<div class="ui-grid-b"
+				style="width: 100%; margin-top: 50px; margin-left: 30%;">
+				<div class="ui-block-a">
+					<a href="#" id="emprestimo" title="Emprestimos"
+						class="ui-shadow ui-btn ui-corner-all">Emprestimos</a>
+				</div>
+				<div class="ui-block-b">
+					<div class="button-wrap">
+						<a href="#" id="reserva" title="Reservas"
+							class="ui-shadow ui-btn ui-corner-all">Reservas</a>
+					</div>
+				</div>
+			</div>
+			<table style="border-spacing: 10px 10px;">
+				<tr>
+					<td><input type="search" name="search" id="search"></td>
+					<td><input type="button" value="Pesquisar" id="pesquisa" /></td>
+				</tr>
+			</table>
+			<div id='conteudo_material'
+				style="margin-left: 30px; color: #302e2e;">
+
+				<div data-role="popup" id="popupBiblioteca" data-overlay-theme="b"
+					data-shadow="true" data-dismissible="false" class="photopopup"
+					data-corners="false" data-tolerance="30,15"></div>
+			</div>
+			<span class="alert"></span>
+		</div>
+	</div>
+	<!-- Biblioteca -->
+
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/messages.js"></script>
+</body>
+</html>
