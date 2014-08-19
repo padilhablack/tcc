@@ -10,7 +10,7 @@
 	//onConnectionFailure: function (){},
 	
 	// # Worklight server connection timeout
-	//timeout: 30000,
+	timeout: 30000,
 	
 	// # How often heartbeat request will be sent to Worklight Server
 	//heartBeatIntervalInSecs: 20 * 60,
@@ -38,14 +38,16 @@
 	analytics : {
 		enabled: false
 		//url : ''
-	}
+	},
+	
+
 	
 	// # The options of busy indicator used during application start up
-	//busyOptions: {text: "Loading..."}
+//	busyOptions: {text: "Loading..."}
 };
 
 if (window.addEventListener) {
-	window.addEventListener('load', function() { WL.Client.init(wlInitOptions); }, false);
+window.addEventListener('load', function() {WL.Client.init(wlInitOptions);}, false);
 } else if (window.attachEvent) {
 	window.attachEvent('onload',  function() { WL.Client.init(wlInitOptions); });
 }

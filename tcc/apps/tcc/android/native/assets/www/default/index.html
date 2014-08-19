@@ -1,0 +1,288 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>tcc</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="jqueryMobile/jquery.mobile-git.css" rel="stylesheet">
+        <link href="jqueryMobile/themes/unaspmobile.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "tcc",
+   "APP_ID": "tcc",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "722222383",
+   "WORKLIGHT_PLATFORM_VERSION": "6.2.0.00.20140801-1709",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/tcc\/android\/"
+};</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+<script src="jqueryMobile/jquery.mobile-git.js"></script>
+    </head>
+    <body bgcolor="black" style="display: none;">
+	<!-- Login -->
+        <div class="paginas  ui-responsive-panel" data-role="page" id="login">
+		<!-- panel -->
+            <div data-display="overlay" data-position="right" data-role="panel" id="mypanel" style="max-width: 200px; max-height: 10px;">
+                <a class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" data-rel="close" href="#" style="background-color: #444444; border-color: #444444">Fechar</a>
+			<a class="sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" href="#" style="background-color: #444444; border-color: #444444">Sair</a>
+            </div>
+		<!-- /panel -->
+		<!-- icone de loading da página  -->
+            <div class="show-page-loading-msg" data-inline="true" data-msgtext="" data-textonly="false" data-textvisible="true">sdfsdfsdf</div>
+		<!-- icone de loading da página  -->
+            <div data-role="header">
+                <div class="faixa_yellow"></div>
+                <ul class="header-unasp" data-divider-theme="b" data-inset="true" data-role="listview">
+                    <li data-icon="custom">
+                        <a href="#" style="background-color: #1d1f1f; border-color: #1d1f1f"><img class="logo" src="images/logo.png">
+						<h1>UNASPMOBILE</h1>
+                            <p>Unasp-EC v.1.0</p> 
+                        </a> <a class="ui-icon-bars" data-rel="panel" data-transition="pop" href="#mypanel" style="background-color: #1d1f1f; border-color: #313030">Bars </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <form action="" class="login" method="">
+                    <label for="usuario">Usu&aacute;rio:</label> <input id="usuario" name="usuario" type="text"> <label for="senha">Senha:</label>
+				<input id="senha" name="senha" type="password"> <a data-role="button" href="#" id="envia">Entrar</a>
+                </form>
+            </div>
+            <div data-position="fixed" data-role="footer" style="bottom: 0;">
+                <h5>footer</h5>
+            </div>
+        </div>
+	<!-- /Login -->
+	<!-- Menu-->
+        <div data-role="page" id="menu">
+		<!-- panel -->
+            <div data-display="overlay" data-position="right" data-role="panel" id="panel-menu" style="max-width: 200px; max-height: 10px;">
+                <a class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" data-rel="close" href="#" style="background-color: #444444; border-color: #444444">Fechar</a>
+			<a class=" sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" href="#" style="background-color: #444444; border-color: #444444">Sair</a>
+            </div>
+		<!-- /panel -->
+            <div class="faixa_yellow"></div>
+            <div data-role="header">
+                <ul class="header-unasp" data-divider-theme="b" data-inset="true" data-role="listview">
+                    <li data-icon="custom">
+                        <a href="#" style="background-color: #1d1f1f; border-color: #1d1f1f"><img class="logo" src="images/logo.png">
+						<h1 style="text-align: center">MENU</h1> 
+                        </a><a class="ui-icon-bars" data-rel="panel" data-transition="pop" href="#panel-menu" style="background-color: #1d1f1f; border-color: #313030">Bars </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-header">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a" style="margin-left: 3%; margin-right: 0px; margin-bottom: 1%; margin-top: 2%">
+                        <label class="display-name-user" id="display-name-user">Usu&aacute;rio</label>
+                    </div>
+                </div>
+            </div>
+            <div data-role="content" style="padding-left: 5%; padding-right: 5%">
+                <div class="ui-grid-c content-menu-opcoes">
+                    <div class="ui-block-a">
+                        <a class="btn-unasp btn-home" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="unaspec" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">UNASP-EC</p>
+                    </div>
+                    <div class="ui-block-b ">
+                        <a class="btn-unasp btn-book" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#biblioteca" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Biblioteca</p>
+                    </div>
+                    <div class="ui-block-c">
+                        <a class="btn-unasp btn-notas" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#notas" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Notas e Faltas</p>
+                    </div>
+                    <div class="ui-block-d" style="">
+                        <a class="btn-unasp btn-info" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Informa&ccedil;&otilde;es</p>
+                    </div>
+                    <div class="ui-block-a">
+                        <a class="btn-unasp btn-dolar" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#finaceiro" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Financeiro</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <a class="btn-unasp btn-virtual" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Unasp Virtual</p>
+                    </div>
+                    <div class="ui-block-c bloco_bottom">
+                        <a class="btn-unasp btn-share" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Divulgue o APP</p>
+                    </div>
+                    <div class="ui-block-d">
+                        <a class="btn-unasp btn-star" data-corners="false" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="background-color: transparent; border-color: transparent"></a>
+                        <p class="title">Avalie o APP</p>
+                    </div>
+                </div>
+                <div class="div_noticias ">
+                    <ul class="header-noticia">
+                        <li>
+                            <img alt="" class="img-noticia" src="images/world.png"></li>
+                        <li>
+                            <span class="title-world">Noticias UNASP</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="noticias ui-content">Feed de noticias</div>
+                    <div style="bottom: 0px">
+                        <table style="width: 100%;">
+                            <TBODY>
+                                <tr>
+                                    <td><a data-corners="false" data-icon="carat-l" data-iconpos="notext" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="float: left; background-color: #ed6800; border-color: #ed6800; border-radius: 5px"></a></td>
+							<td><a data-corners="false" data-icon="carat-r" data-iconpos="notext" data-iconshadow="false" data-role="button" data-shadow="false" href="#" id="button" style="float: right; background-color: #ed6800; border-color: #ed6800; border-radius: 5px"></a></td>
+                                </tr>
+                            </TBODY>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div data-position="fixed" data-role="footer" style="bottom: 0; background-color: #313434">
+                <h5>footer</h5>
+            </div>
+        </div>
+	<!-- /Menu -->
+	<!-- página notas e faltas -->
+        <div data-role="page" id="notas">
+            <div class="faixa_yellow"></div>
+            <div data-role="header">
+                <ul class="header-unasp" data-divider-theme="b" data-inset="true" data-role="listview">
+                    <li data-icon="custom">
+                        <a href="#" style="background-color: #1d1f1f; border-color: #1d1f1f"><img class="logo" src="images/logo.png">
+						<h1 style="text-align: center">NOTAS e FALTAS</h1> 
+                        </a><a class="ui-icon-bars" href="#" style="background-color: #1d1f1f; border-color: #313030">Bars </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="content">
+                <br> 
+                <br>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" id="id">
+                        <select class="opcoes-notas" id="curso">
+						<option selected value="">Curso:</option>
+					</select>
+                    </div>
+                    <div class="ui-block-b" id="turma">
+                        <select class="opcoes-notas">
+						<option value="">Turma:</option>
+					</select>
+                    </div>
+                    <div class="ui-block-a" id="periodo">
+                        <select class="opcoes-notas">
+						<option selected>Periodo:</option>
+					</select>
+                    </div>
+                    <div class="ui-block-b" id="disciplina">
+                        <select class="opcoes-notas">
+						<option selected>Disciplina:</option>
+					</select>
+                    </div>
+                </div>
+                <div data-role="navbar" id="navbar0">
+                    <ul>
+                        <li>
+                            <a class="opcoes-aluno" href="#" id="avaliacao-menu">Avalia&ccedil;&atilde;o</a>
+                        </li>
+                        <li>
+                            <a href="#" id="notas-menu">Notas</a>
+                        </li>
+                        <li>
+                            <a href="#" id="faltas-menu">Faltas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="conteudo" style="color: black"></div>
+            </div>
+        </div>
+	<!-- /pagina notas e faltas -->
+	<!-- Financeiro -->
+        <div data-role="page" id="finaceiro">
+            <div class="faixa_yellow"></div>
+            <div data-role="header">
+                <ul class="header-unasp" data-divider-theme="b" data-inset="true" data-role="listview">
+                    <li data-icon="custom">
+                        <a href="#" style="background-color: #1d1f1f; border-color: #1d1f1f"><img class="logo" src="images/logo.png">
+						<h1 style="text-align: center">FINANCEIRO</h1> 
+                        </a><a class="ui-icon-bars" href="#" style="background-color: #1d1f1f; border-color: #313030">Bars </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="content">
+                <br> 
+                <br> 
+                <select id="option-ano" name="select">
+				<option value="option">Ano</option>
+			</select>
+                <div id="conteudo-financeiro" style="color: #302e2e;"></div>
+            </div>
+        </div>
+	<!-- /Fincanceiro -->
+	<!-- Biblioteca -->
+        <div data-role="page" id="biblioteca">
+            <div class="faixa_yellow"></div>
+            <div data-role="header">
+                <ul class="header-unasp" data-divider-theme="b" data-inset="true" data-role="listview">
+                    <li data-icon="custom">
+                        <a href="#" style="background-color: #1d1f1f; border-color: #1d1f1f"><img class="logo" src="images/logo.png">
+						<h1 style="text-align: center">BIBLIOTECA</h1> 
+                        </a><a class="ui-icon-bars" href="#" style="background-color: #1d1f1f; border-color: #313030">Bars </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content" data-role="main">
+                <br>
+                <div class="ui-grid-b" style="width: 100%; margin-top: 50px; margin-left: 30%;">
+                    <div class="ui-block-a">
+                        <a class="ui-shadow ui-btn ui-corner-all" href="#" id="emprestimo" title="Emprestimos">Emprestimos</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="button-wrap">
+                            <a class="ui-shadow ui-btn ui-corner-all" href="#" id="reserva" title="Reservas">Reservas</a>
+                        </div>
+                    </div>
+                </div>
+                <table style="border-spacing: 10px 10px;">
+                    <TBODY>
+                        <tr>
+                            <td><input id="search" name="search" type="search"></td>
+					<td><input id="pesquisa" type="button" value="Pesquisar"></td>
+                        </tr>
+                    </TBODY>
+                </table>
+                <div id="conteudo_material" style="margin-left: 30px; color: #302e2e;">
+                    <div class="photopopup" data-corners="false" data-dismissible="false" data-overlay-theme="b" data-role="popup" data-shadow="true" data-tolerance="30,15" id="popupBiblioteca"></div>
+                </div>
+                <span class="alert"></span>
+            </div>
+        </div>
+	<!-- /Biblioteca -->
+        <script src="js/functions.js"></script>
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/view/view-notas.js"></script>
+	<script src="js/view/view-biblioteca.js"></script>
+	<script src="js/view/view-financeiro.js"></script>
+	<script src="js/messages.js"></script>
+    </body>
+</html>

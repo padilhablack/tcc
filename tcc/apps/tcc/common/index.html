@@ -19,17 +19,23 @@
 </script>
 <script src="jqueryMobile/jquery.mobile-git.js"></script>
 </head>
-<body style="display: none;">
-
+<body style="display: none;" bgcolor="black">
+	<div class="show-page-loading-msg" data-textonly="false"
+		data-textvisible="true" data-msgtext="" data-inline="true"></div>
+	<!-- icone de loading da página  -->
 	<!-- Login -->
 	<div data-role="page" id="login" class="paginas  ui-responsive-panel">
-			<!-- panel -->
-			<div data-role="panel" id="mypanel" data-display="overlay"
-				data-position="right" style="max-width: 200px; max-height: 10px;">
-				<a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Fechar</a>
-				<a href="#" class="sair" class="ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Sair</a>
-			</div>
-			<!-- /panel -->
+		<!-- panel -->
+		<div data-role="panel" id="mypanel" data-display="overlay"
+			data-position="right" style="max-width: 130px;background-color: #1d1f1f;">
+			<a href="#" data-rel="close"
+				class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Fechar</a>
+			<a href="#" class="sair" data-rel="close"
+				class="sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Sair</a>
+		</div>
+		<!-- /panel -->
 		<div data-role="header">
 			<div class="faixa_yellow"></div>
 			<ul data-role="listview" data-inset="true" class="header-unasp"
@@ -38,9 +44,9 @@
 					style="background-color: #1d1f1f; border-color: #1d1f1f"><img
 						src="images/logo.png" class="logo">
 						<h1>UNASPMOBILE</h1>
-						<p>Unasp-EC v.1.0</p> </a> <a href="#mypanel"
-					data-rel="panel" data-transition="pop"
-					class="ui-btn ui-btn-inline ui-corner-all" class="ui-icon-bars"
+						<p>Unasp-EC v.1.0</p> </a> <a href="#mypanel" data-rel="panel"
+					data-transition="pop" class="ui-btn ui-btn-inline ui-corner-all"
+					class="ui-icon-bars"
 					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
 			</ul>
 		</div>
@@ -56,18 +62,21 @@
 			<h5>footer</h5>
 		</div>
 	</div>
-
 	<!-- /Login -->
 
 	<!-- Menu-->
 	<div data-role="page" id="menu">
-			<!-- panel -->
-			<div data-role="panel" id="panel-menu" data-display="overlay"
-				data-position="right" style="max-width: 200px; max-height: 10px;">
-				<a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Fechar</a>
-				<a href="#" class="sair" class="ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline" style="background-color: #444444; border-color: #444444">Sair</a>
-			</div>
-			<!-- /panel -->
+		<!-- panel -->
+		<div data-role="panel" id="panel-menu" data-display="overlay"
+			data-position="right" style="max-width: 200px; max-height: 10px;">
+			<a href="#" data-rel="close"
+				class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Fechar</a>
+			<a href="#" data-rel="close"
+				class=" sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Sair</a>
+		</div>
+		<!-- /panel -->
 		<div class="faixa_yellow"></div>
 		<div data-role="header">
 			<ul data-role="listview" data-inset="true" class="header-unasp"
@@ -182,8 +191,20 @@
 		</div>
 	</div>
 	<!-- /Menu -->
+
 	<!-- página notas e faltas -->
 	<div data-role="page" id="notas">
+		<!-- panel -->
+		<div data-role="panel" id="panel-menu" data-display="overlay"
+			data-position="right" style="max-width: 200px; max-height: 10px;">
+			<a href="#" data-rel="close"
+				class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Fechar</a>
+			<a href="#" data-rel="close"
+				class=" sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline"
+				style="background-color: #444444; border-color: #444444">Sair</a>
+		</div>
+		<!-- /panel -->
 		<div class="faixa_yellow"></div>
 		<div data-role="header">
 			<ul data-role="listview" data-inset="true" class="header-unasp"
@@ -230,6 +251,9 @@
 			<div id="conteudo" style="color: black"></div>
 		</div>
 	</div>
+	<!-- /pagina notas e faltas -->
+
+	<!-- Financeiro -->
 	<div data-role="page" id="finaceiro">
 		<div class="faixa_yellow"></div>
 		<div data-role="header">
@@ -252,6 +276,8 @@
 			<div id='conteudo-financeiro' style="color: #302e2e;"></div>
 		</div>
 	</div>
+	<!-- /Fincanceiro -->
+
 	<!-- Biblioteca -->
 	<div data-role="page" id="biblioteca">
 		<div class="faixa_yellow"></div>
@@ -289,7 +315,6 @@
 			</table>
 			<div id='conteudo_material'
 				style="margin-left: 30px; color: #302e2e;">
-
 				<div data-role="popup" id="popupBiblioteca" data-overlay-theme="b"
 					data-shadow="true" data-dismissible="false" class="photopopup"
 					data-corners="false" data-tolerance="30,15"></div>
@@ -297,11 +322,15 @@
 			<span class="alert"></span>
 		</div>
 	</div>
-	<!-- Biblioteca -->
+	<!-- /Biblioteca -->
 
+	<script src="js/functions.js"></script>
 	<script src="js/initOptions.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/auth.js"></script>
+	<script src="js/view/view-notas.js"></script>
+	<script src="js/view/view-biblioteca.js"></script>
+	<script src="js/view/view-financeiro.js"></script>
 	<script src="js/messages.js"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@ unaspChallengeHandler.isCustomResponse = function(response) {
 };
 
 unaspChallengeHandler.handleChallenge = function(response){
+	
 	var authRequired = response.responseJSON.authRequired;
 	var userSession = response.responseJSON.userIdentity;
 
@@ -27,6 +28,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 		$("#usuario").val("");
 		$("#senha").val("");
 		unaspChallengeHandler.submitFailure();
+
 
 	} else if (authRequired == false){
 
@@ -40,7 +42,9 @@ unaspChallengeHandler.handleChallenge = function(response){
 //		alert(JSON.stringify(RA));
 		$.mobile.changePage("#menu");
 		$("#display-name-user").text(USUARIO);
+		$( "#login" ).show();
 		unaspChallengeHandler.submitSuccess();
+		
 	}
 };
 
@@ -62,13 +66,25 @@ $("#envia").bind('click', function () {
 	};
 
 	unaspChallengeHandler.submitAdapterAuthentication(invocationData, {});
+	return false;
 });
 //faz logout
 
-$("#sair").click(function(){
-	alert("Saindo..");
-	WL.Client.logout('UnaspRealm', {onSuccess:WL.Client.reloadApp});
-	$.mobile.changePage("#login");
+$(".sair").click(function(){
+	loading("show-page-loading-msg","Saindo..");
+	WL.Client.logout('UnaspRealm', {onSuccess:function(){
+		setTimeout(function(){sair()}, 5000);
+	}});
+	
+	function sair(){
+		$.mobile.loading( "hide" );
+		$.mobile.changePage("#login");
+		WL.Client.reloadApp();
+		
+	}
+	
+
+	
 })
 
 

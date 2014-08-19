@@ -9,18 +9,20 @@ function wlCommonInit(){
 		path = "www/default/";
 	}
 
+
 	$(document).ready(function(){
-		$.getScript(path+"js/functions.js");
-		$.getScript(path+"js/view/view-notas.js");
-		$.getScript(path+"js/view/view-biblioteca.js");
-		$.getScript(path+"js/view/view-financeiro.js");
 		verificaLogin();
-	});
+	})
+
+
+
 
 }
 
 function verificaLogin(){
-
+	
+	loading("show-page-loading-msg","Carregando..");
+	
 	var invocationData = {
 			adapter : "autenticacaoAdapter", 
 			procedure : "getUsuarioActive",
@@ -33,24 +35,28 @@ function verificaLogin(){
 	});
 
 	function activesucess(response){
-
+		$.mobile.loading( "hide" );
 		result  = response.invocationResult.user
-		
+
 		//precarrega as opções
 		RA = result.attributes.ra; 
 		USUARIO  = result.displayName	
-		
-		
-		
-		if(result == null){
-			$.mobile.changePage("#login");
-		}else{
+
+
+
+		if(result !== null){
+			$("#login").hide();
 			loadCurso(RA);
 			loadEmprestimos(RA);
 			loadReservas(RA);
 			carregaAno(RA);
 			$.mobile.changePage("#menu");
 			$("#display-name-user").text(USUARIO);
+
+		}else{
+			$.mobile.loading( "hide" );
+			$("#login").show();
+			$.mobile.changePage("#login");
 		}	
 	}
 

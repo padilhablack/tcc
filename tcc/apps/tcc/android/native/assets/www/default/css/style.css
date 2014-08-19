@@ -1,0 +1,183 @@
+
+/* Stylesheet content from css/style.css in folder common */
+.paginas {
+	background-color: #2e3131;
+}
+
+.ui-page-theme-a {
+	text-shadow: 0;
+}
+
+.title {
+	font-size: 14px;
+	text-align: center;
+}
+
+.login {
+	padding: 15px;
+	background-color: #1d1f1f;
+	border-radius: 10px;
+	max-width: 500px;
+	margin: 20% auto;
+}
+
+.login label {
+	color: #f46200;
+	font-style: italic;
+	font-family: inherit;
+	text-shadow: 0 1px rgba(243, 243, 243, 0);
+}
+
+.alert {
+	max-width: 250px;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	z-index: 9999999;
+	padding: 2%;
+	color: #fff;
+	text-align: center;
+}
+
+.invisible {
+	display: none;
+}
+
+.alert-error {
+	background-color: #e74c3c;
+}
+
+.alert-success {
+	background-color: #2ecc71;
+}
+
+.desabilita {
+	background-color: white;
+	opacity: 0.8;
+}
+
+.faixa_yellow {
+	height: 7px;
+	background-color: #ed6800;
+	widht: 100%;
+}
+
+.nome_header li {
+	padding: 0.5%;
+}
+
+.logo {
+	max-width: 70px;
+	margin: auto auto auto auto;
+	display: block;
+	z-index: auto;
+}
+
+/*Menu*/
+.content-menu-opcoes {
+	background-color: #e5e7e7;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.display-name-user {
+	background-color: #ffffff;
+	height: 5%;
+	color: black;
+	font-style: italic;
+	text-align: center;
+	padding: 1%;
+	border-radius: 5px;
+}
+
+/*Bot�es*/
+.btn-unasp {
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: auto auto auto auto;
+	background-size: 70px auto;
+	height: 70px;
+}
+
+.btn-bar {
+	margin: auto auto auto auto;
+}
+
+.btn-flag {
+	margin: auto auto auto auto;
+}
+
+.btn-home {
+	background-image: url('../images/icones/home.png');
+}
+
+.btn-notas {
+	background-image: url('../images/icones/notas.png');
+}
+
+.btn-book {
+	background-image: url('../images/icones/book.png');
+}
+
+.btn-info {
+	background-image: url('../images/icones/info.png');
+}
+
+.btn-virtual {
+	background-image: url('../images/icones/virtual.png');
+}
+
+.btn-dolar {
+	background-image: url('../images/icones/dolar.png');
+}
+
+.btn-share {
+	background-image: url('../images/icones/share.png');
+}
+
+.btn-star {
+	background-image: url('../images/icones/star.png');
+}
+
+.user-header {
+	margin: 0;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.17, #B5B5B5
+		), color-stop(1, #E6E3E6)); background-image : -o-linear-gradient(
+	bottom, #B5B5B5 17%, #E6E3E6 100%); background-image :
+	-moz-linear-gradient( bottom, #B5B5B5 17%, #E6E3E6 100%);
+	background-image : -webkit-linear-gradient( bottom, #B5B5B5 17%,
+	#E6E3E6 100%); background-image : -ms-linear-gradient( bottom, #B5B5B5
+	17%, #E6E3E6 100%); background-image : linear-gradient( to bottom,
+	#B5B5B5 17%, #E6E3E6 100%);
+	width: 100%;
+	background-image: -o-linear-gradient(bottom, #B5B5B5 17%, #E6E3E6 100%);
+	background-image: -moz-linear-gradient(bottom, #B5B5B5 17%, #E6E3E6 100%);
+	background-image: -webkit-linear-gradient(bottom, #B5B5B5 17%, #E6E3E6 100%);
+	background-image: -ms-linear-gradient(bottom, #B5B5B5 17%, #E6E3E6 100%);
+	background-image: linear-gradient(to bottom, #B5B5B5 17%, #E6E3E6 100%);
+}
+
+/*Feed de noticias*/
+.div_noticias {
+	padding: 15px;
+	margin: 1% auto;
+	background-color: #d0d2d2;
+	border-radius: 10px;
+}
+
+.noticias {
+	background-color: rgba(208, 210, 210, 0);
+	height:20%;
+	max-height: 400px;
+	color:black;
+}
+
+.header-noticia {
+	padding-bottom: 2%;
+}
+
+.header-noticia li {
+	list-style: none;
+	float: left;
+	padding-left: 2%;
+}
