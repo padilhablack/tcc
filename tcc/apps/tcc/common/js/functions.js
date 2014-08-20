@@ -39,7 +39,7 @@ function failConnection(result){
 
 //Mensagens de alerta
 function showAlert(type,message) {
-	  $('.alert').removeClass('invisible').addClass( 'ui-corner-all ui-shadow '+type).html(message).fadeIn();
+	  $('.alert').removeClass('invisible').addClass( 'ui-icon-alert ui-shadow  '+type).html(message).fadeIn();
 		  
 	  $('.alert').click(function() {
 		    closeAlert();

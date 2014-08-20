@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,19 +21,30 @@
 <script src="jqueryMobile/jquery.mobile-git.js"></script>
 </head>
 <body style="display: none;" bgcolor="black">
-	<div class="show-page-loading-msg" data-textonly="false"
-		data-textvisible="true" data-msgtext="" data-inline="true"></div>
+	<!-- alerta de mensagem -->
+	<div  class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-inline="true"></div>
+		
+	<!-- falha de autenticao  ou problemas de conexao -->
+	<div id="fail-conection" data-theme="a" data-icon="alert"
+		data-textonly="true" data-textvisible="true" data-msgtext=""
+		data-inline="true" data-html=""></div>
+		
+		<div class="alert">
+		
+	</div>
+		
 	<!-- icone de loading da página  -->
 	<!-- Login -->
 	<div data-role="page" id="login" class="paginas  ui-responsive-panel">
 		<!-- panel -->
 		<div data-role="panel" id="mypanel" data-display="overlay"
-			data-position="right" style="max-width: 130px;background-color: #1d1f1f;">
+			data-position="right"
+			style="max-width: 130px; background-color: #1d1f1f;">
 			<a href="#" data-rel="close"
 				class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline"
 				style="background-color: #444444; border-color: #444444">Fechar</a>
-			<a href="#" class="sair" data-rel="close"
-				class="sair ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline"
+			<a href="#" id="desligar" class="sair" data-rel="close"
+				class=" ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-left ui-btn-inline"
 				style="background-color: #444444; border-color: #444444">Sair</a>
 		</div>
 		<!-- /panel -->
@@ -45,8 +57,7 @@
 						src="images/logo.png" class="logo">
 						<h1>UNASPMOBILE</h1>
 						<p>Unasp-EC v.1.0</p> </a> <a href="#mypanel" data-rel="panel"
-					data-transition="pop" class="ui-btn ui-btn-inline ui-corner-all"
-					class="ui-icon-bars"
+					data-transition="pop" class=" ui-icon-bars ui-btn ui-btn-inline ui-corner-all"
 					style="background-color: #1d1f1f; border-color: #313030">Bars </a></li>
 			</ul>
 		</div>
@@ -77,8 +88,9 @@
 				style="background-color: #444444; border-color: #444444">Sair</a>
 		</div>
 		<!-- /panel -->
-		<div class="faixa_yellow"></div>
-		<div data-role="header">
+
+		<div data-role="header" data-position="fixed">
+			<div class="faixa_yellow"></div>
 			<ul data-role="listview" data-inset="true" class="header-unasp"
 				data-divider-theme="b">
 				<li data-icon="custom"><a href="#"
@@ -205,8 +217,9 @@
 				style="background-color: #444444; border-color: #444444">Sair</a>
 		</div>
 		<!-- /panel -->
-		<div class="faixa_yellow"></div>
-		<div data-role="header">
+
+		<div data-role="header" data-position="fixed">
+			<div class="faixa_yellow"></div>
 			<ul data-role="listview" data-inset="true" class="header-unasp"
 				data-divider-theme="b">
 				<li data-icon="custom"><a href="#"
@@ -255,8 +268,9 @@
 
 	<!-- Financeiro -->
 	<div data-role="page" id="finaceiro">
-		<div class="faixa_yellow"></div>
-		<div data-role="header">
+
+		<div data-role="header" data-position="fixed">
+			<div class="faixa_yellow"></div>
 			<ul data-role="listview" data-inset="true" class="header-unasp"
 				data-divider-theme="b">
 				<li data-icon="custom"><a href="#"
@@ -280,8 +294,9 @@
 
 	<!-- Biblioteca -->
 	<div data-role="page" id="biblioteca">
-		<div class="faixa_yellow"></div>
-		<div data-role="header">
+
+		<div data-role="header" data-position="fixed">
+			<div class="faixa_yellow"></div>
 			<ul data-role="listview" data-inset="true" class="header-unasp"
 				data-divider-theme="b">
 				<li data-icon="custom"><a href="#"
@@ -294,8 +309,7 @@
 		</div>
 		<div data-role="main" class="content">
 			<br>
-			<div class="ui-grid-b"
-				style="width: 100%; margin-top: 50px; margin-left: 30%;">
+			<div class="ui-grid-b" style="width: 100%; margin-left: 30%;">
 				<div class="ui-block-a">
 					<a href="#" id="emprestimo" title="Emprestimos"
 						class="ui-shadow ui-btn ui-corner-all">Emprestimos</a>
@@ -319,7 +333,6 @@
 					data-shadow="true" data-dismissible="false" class="photopopup"
 					data-corners="false" data-tolerance="30,15"></div>
 			</div>
-			<span class="alert"></span>
 		</div>
 	</div>
 	<!-- /Biblioteca -->

@@ -54,7 +54,7 @@ $("#envia").bind('click', function () {
 	var password = $("#senha").val();
 	
 	if(username == "" || password == ""){
-		alert("Digite os dados corretamente");
+		showAlert("alert-error","Digite os dados corretamente!");
 		$("#usuario").val("");
 		$("#senha").val("");
 	}
@@ -83,7 +83,18 @@ $(".sair").click(function(){
 		
 	}
 	
+})
 
+$("#desligar").click(function(){
+	loading("show-page-loading-msg","Saindo..");
+	WL.Client.logout('UnaspRealm', {onSuccess:function(){
+		setTimeout(function(){sair()}, 5000);
+	}});
+	
+	function sair(){
+		$.mobile.loading( "hide" );
+		WL.App.close();
+	}
 	
 })
 

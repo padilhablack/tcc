@@ -15,8 +15,6 @@ function wlCommonInit(){
 	})
 
 
-
-
 }
 
 function verificaLogin(){
@@ -61,7 +59,8 @@ function verificaLogin(){
 	}
 
 	function activefailure(){
-		alert('ERRO');
+		showAlert("alert-new","<p>Falha na conexao!Verifique e tente novamente</p>");
+		$.mobile.loading( "hide" );fadeOut("slow");
 	}
 
 }
