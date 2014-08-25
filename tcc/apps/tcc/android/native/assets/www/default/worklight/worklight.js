@@ -4611,6 +4611,7 @@ WL.Logger = (function (jQuery) {
   var CDV_ACTION_LOG = 'log';
   var CDV_ACTION_SET_NATIVE_OPTIONS = 'setNativeOptions';
   var CDV_ACTION_SEND = 'send';
+  var CDV_ACTION_GET_STATUS = 'getStatus';
   var CDV_ACTION_SEND_ANALYTICS = 'sendAnalytics';
   var REQ_SEND_LOGS = '/loguploader';
   
@@ -4984,7 +4985,7 @@ WL.Logger = (function (jQuery) {
 
     if (__checkNativeEnvironment()) {
       setTimeout(function () {
-        cordova.exec(onSuccess, dfd.reject, CDV_PLUGIN_LOGGER, CDV_ACTION_SET_NATIVE_OPTIONS, []);
+        cordova.exec(onSuccess, dfd.reject, CDV_PLUGIN_LOGGER, CDV_ACTION_GET_STATUS, []);
       }, 0);
     } else {
       dfd.resolve(state);

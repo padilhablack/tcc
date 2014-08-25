@@ -2,7 +2,7 @@
 <!-- Licensed Materials - Property of IBM
 			 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
 			 US Government Users Restricted Rights - Use, duplication or
-             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="tcc" platformVersion="6.2.0.00.20140801-1709">
+             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="tcc" platformVersion="6.2.0.00.20140812-1824">
     <displayName>tcc</displayName>
     <description>tcc</description>
     <author>
@@ -14,6 +14,13 @@
     <mainFile>index.html</mainFile>
     <features/>
     <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
+    <iphone bundleId="com.tcc" version="1.0">
+        <worklightSettings include="false"/>
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+        </security>
+    </iphone>
     <android version="1.0">
         <worklightSettings include="false"/>
         <security>
@@ -23,4 +30,8 @@
             <packageName/>
         </security>
     </android>
+    <blackberry version="1.0"/>
+    <windowsPhone8 version="1.0">
+        <uuid>e5f02516-4cab-4761-929f-adec2740632d</uuid>
+    </windowsPhone8>
 </application>

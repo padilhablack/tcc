@@ -2,6 +2,9 @@
     <wb-module deploy-name="tcc">
         <wb-resource deploy-path="/" source-path="/apps/tcc/common"/>
         <wb-resource deploy-path="/" source-path="/apps/tcc/android"/>
+        <wb-resource deploy-path="/" source-path="/apps/tcc/blackberry"/>
+        <wb-resource deploy-path="/" source-path="/apps/tcc/iphone"/>
+        <wb-resource deploy-path="/" source-path="/apps/tcc/windowsphone8"/>
         <property name="context-root" value="tcc"/>
     </wb-module>
 </project-modules>
