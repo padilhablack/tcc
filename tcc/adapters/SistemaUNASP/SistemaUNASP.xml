@@ -27,7 +27,9 @@
 	</connectivity>
 
 	<!-- Replace this with appropriate procedures -->
-	<procedure name="login"/>
-		<procedure name="retornaCurso"/>
-		<procedure name="retornaPeriodo"/>
+	<procedure name="login" />
+	<procedure name="retornaPeriodo" />
+	<procedure name="retornaCurso" />
+	<procedure name='retornaTurma' />
+	<procedure name="retornaDisciplina" />
 </wl:adapter>

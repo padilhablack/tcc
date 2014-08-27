@@ -1381,8 +1381,6 @@ div.ui-mobile-viewport {
 }
 .ui-loader-default {
 	background: none;
-	filter: Alpha(Opacity=18);
-	opacity: .18;
 	width: 2.875em;
 	height: 2.875em;
 	margin-left: -1.4375em;
@@ -1410,7 +1408,6 @@ div.ui-mobile-viewport {
 	text-align: center;
 }
 .ui-loader .ui-icon-loading {
-	background-color: #000;
 	display: block;
 	margin: 0;
 	width: 2.75em;

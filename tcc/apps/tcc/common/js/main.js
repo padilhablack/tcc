@@ -18,9 +18,9 @@ function wlCommonInit(){
 }
 
 function verificaLogin(){
-	
+
 	loading("show-page-loading-msg","Carregando..");
-	
+
 	var invocationData = {
 			adapter : "autenticacaoAdapter", 
 			procedure : "getUsuarioActive",
@@ -33,10 +33,9 @@ function verificaLogin(){
 	});
 
 	function activesucess(response){
-		$.mobile.loading( "hide" );
-		result  = response.invocationResult.user
+		$.mobile.loading( "hide" );result  = response.invocationResult.user
 
-		//precarrega as opções
+//		/precarrega as opções
 		RA = result.attributes.ra; 
 		USUARIO  = result.displayName	
 
@@ -64,5 +63,24 @@ function verificaLogin(){
 	}
 
 }
+
+curso = 800,ra = 86539,ano = 2014,periodo = 20141;
+var invocationData = {
+		adapter : "SistemaUNASP", 
+		procedure : "retornaTurma",
+		parameters : [curso,ra,ano,periodo], 
+
+};
+
+WL.Client.invokeProcedure(invocationData,{
+	onSuccess : function(){
+		alert('SIM')
+	},
+	onFailure : function(){
+		alert('Não');
+	}
+
+});
+
 
 
